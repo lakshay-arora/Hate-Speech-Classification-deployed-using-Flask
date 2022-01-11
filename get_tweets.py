@@ -23,7 +23,7 @@ def get_related_tweets(text_query):
     count = 50
     try:
         # Pulling individual tweets from query
-        for tweet in api.search(q=text_query, count=count):
+        for tweet in api.search_tweets(q=text_query, count=count):
             print(tweet.text)
             # Adding to list that contains all tweets
             tweets_list.append({'created_at': tweet.created_at,
